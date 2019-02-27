@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang>
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -109,7 +109,7 @@
 <meta property="og:title" content="tags">
 <meta property="og:url" content="http://nastu.top/tags/index.html">
 <meta property="og:site_name" content="Nastu">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-02-26T10:39:16.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tags">
@@ -173,7 +173,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -199,7 +199,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -225,7 +225,37 @@
 
     
 
-    <a href="/" rel="section">Home</a>
+    <a href="/" rel="section">首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-photo">
+
+    
+    
+    
+
+    
+
+    <a href="/photo/" rel="section">图像</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-article">
+
+    
+    
+    
+
+    
+
+    <a href="/article/" rel="section">文章</a>
 
   </li>
         
@@ -240,7 +270,7 @@
 
     
 
-    <a href="/tags/" rel="section">Tags</a>
+    <a href="/tags/" rel="section">标签</a>
 
   </li>
         
@@ -255,14 +285,14 @@
 
     
 
-    <a href="/categories/" rel="section">Categories</a>
+    <a href="/categories/" rel="section">分类</a>
 
   </li>
         
         
         
           
-          <li class="menu-item menu-item-archives">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -270,22 +300,7 @@
 
     
 
-    <a href="/archives/" rel="section">Archives</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-changelog">
-
-    
-    
-    
-
-    
-
-    <a href="/changelog/" rel="section">变更</a>
+    <a href="/about/" rel="section">关于我</a>
 
   </li>
 
@@ -295,7 +310,7 @@
           
             <a href="javascript:;" class="popup-trigger">
           
-            Search</a>
+            搜索</a>
         </li>
       
     </ul>
@@ -305,6 +320,9 @@
     
 
     
+    
+      
+      
     
       
       
@@ -340,7 +358,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -400,7 +418,7 @@
             <div class="tag-cloud-title">
                 
                 
-                No tags
+                暂无标签
             </div>
             <div class="tag-cloud-tags">
               
@@ -460,10 +478,10 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
@@ -1203,7 +1221,7 @@
     $('.highlight').each(function (i, e) {
       var $wrap = $('<div>').addClass('highlight-wrap')
       $(e).after($wrap)
-      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
         var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
           return $(e).text()
         }).toArray().join('\n')
@@ -1218,14 +1236,14 @@
         var result = document.execCommand('copy')
         document.body.removeChild(ta)
         
-          if(result)$(this).text('Copied')
-          else $(this).text('Copy failed')
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
         
         $(this).blur()
       })).on('mouseleave', function (e) {
         var $b = $(this).find('.copy-btn')
         setTimeout(function () {
-          $b.text('Copy')
+          $b.text('复制')
         }, 300)
       }).append(e)
     })
